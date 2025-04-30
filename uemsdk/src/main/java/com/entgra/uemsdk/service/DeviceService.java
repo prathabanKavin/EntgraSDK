@@ -13,9 +13,8 @@ public class DeviceService {
     }
 
     // Register Device
-    public String registerDevice() {
-        // TODO: Retrieve configToken from configs and serialNumber from device
-        String serialNumber = "HN00192";
+    public String registerDevice(String serialNumber) {
+        // TODO: Retrieve configToken from configs
         String configToken = "casper408";
 
         // Get configuration from MDM server based on serial number

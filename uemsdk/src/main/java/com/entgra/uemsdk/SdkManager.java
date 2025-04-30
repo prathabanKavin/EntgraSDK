@@ -14,8 +14,8 @@ public class SdkManager {
     private static FirmwareService firmwareService = new FirmwareService();
 
     // Register Device
-    public static String registerDevice() {
-        return deviceService.registerDevice();
+    public static String registerDevice(String serialNumber) {
+        return deviceService.registerDevice(serialNumber);
     }
 
     // Get available firmwares
@@ -24,12 +24,12 @@ public class SdkManager {
     }
 
     // Create a firmware install operation for the device
-    public OperationResponse createFirmwareInstallOperation(String firmwareReleaseId) {
+    public static OperationResponse createFirmwareInstallOperation(String firmwareReleaseId) {
         return firmwareService.createFirmwareInstallOperation(firmwareReleaseId);
     }
 
     // Update the operation status
-    public String updateFirmwareOperation(String operationId, String status) {
+    public static String updateFirmwareOperation(String operationId, String status) {
         return firmwareService.updateFirmwareOperation(operationId, status);
     }
 }

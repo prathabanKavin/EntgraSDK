@@ -23,6 +23,7 @@ public class FirmwareService {
         return firmwareAPI.createFirmwareInstallOperation(firmwareReleaseId);
     }
 
+    // Update the operation status
     public String updateFirmwareOperation(String operationId, String status) {
         return firmwareAPI.updateFirmwareOperation(operationId, status);
     }
